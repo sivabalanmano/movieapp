@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss','@nuxt-alt/http'],
   app:{
     head:{
      link:[
@@ -15,5 +15,10 @@ export default defineNuxtConfig({
       }
      ]     
     }
+  },
+  http:{
+    baseURL:"http://localhost:5000",
+    credentials:"omit",
+    browserBaseURL:"http://localhost:5000",
   }
 })
