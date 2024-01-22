@@ -15,6 +15,7 @@ import type { NuxtLink } from '#build/components';
             <div v-for="(pages,index) in pagesList" :key="index" >
            <NuxtLink :to="pages.route"><i class="fa-solid fa-magnifying-glass p-1"></i></NuxtLink>
             <NuxtLink :to="pages.route2"><i class="fa-solid fa-home p-1"></i></NuxtLink>
+            <NuxtLink :to="pages.route3" class="text-green-500">Add</NuxtLink>
         </div>
         
         </div>
@@ -30,8 +31,9 @@ export default{
             pagesList:[
                 {
                     route:"/allmovies",
-                    route2:"/topmovies"
-                },
+                    route2:"/topmovies",
+                    route3:"/create"
+                }
             ]
         }
     }
